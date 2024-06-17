@@ -4,7 +4,7 @@ module ActiveStorage
   module Blurhash
     module Analyzing
       attr_accessor :thumbnail
-      
+
       def metadata
         # we could also re-implement #metadata, so that the image is only read once, but it's much less DRY
         read_image do |image|
