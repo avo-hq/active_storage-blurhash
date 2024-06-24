@@ -22,5 +22,13 @@ Gem::Specification.new do |spec|
     Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   end
 
-  spec.add_dependency "rails", ">= 7.1.3.4"
+  spec.add_dependency "activestorage", ">= 7.1.3.4"
+  spec.add_dependency "activesupport", ">= 7.1.3.4"
+  spec.add_dependency "blurhash", "~> 0.1.0"
+  spec.add_dependency "image_processing", ">= 1.0.0"
+
+  spec.add_development_dependency "rails", ">= 7.1.3.4"
+  spec.add_development_dependency "mini_magick"
+  spec.add_development_dependency "ruby-vips"
+  spec.add_development_dependency "standard"
 end
