@@ -1,0 +1,8 @@
+Description:
+    This generator installs/pins the `blurhash` NPM package and copies over the necessary JavaScript boilerplate.
+
+Example:
+    bin/rails generate active_storage:blurhash:install
+
+    This will create:
+        app/javascript/blurhash/index.js

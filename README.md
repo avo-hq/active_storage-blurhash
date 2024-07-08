@@ -21,6 +21,13 @@ Or install it yourself as:
 $ gem install active_storage-blurhash
 ```
 
+
+Install the JavaScript packages and blurhash snippet:
+
+```bash
+$ bin/rails g active_storage:blurhash:install
+```
+
 ## Contributing
 Contribution directions go here.
 
