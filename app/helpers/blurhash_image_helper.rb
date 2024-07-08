@@ -13,7 +13,8 @@ module BlurhashImageHelper
       blob = source.blob
     when ActiveStorage::VariantWithRecord
       blob = source.blob
-      size = source.variation.transformations[:resize]
+      # dimensions of the transformation need not represent the actual aspect ratio, like in `resize_to_fit`
+      # size = source.variation.transformations[:resize]
     end
 
     blurhash = blob.metadata["blurhash"]
