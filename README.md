@@ -63,3 +63,15 @@ Note that for each blob an `AnalyzeJob` will be appended to your job processor q
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## Other gems & packages
+
+ - [`avo`](https://github.com/avo-hq/avo) - Build Content management systems with Ruby on Rails
+ - [`class_variants`](https://github.com/avo-hq/class_variants) - Easily configure styles and apply them as classes. Very useful when you're implementing Tailwind CSS components and call them with different states.
+ - [`stimulus-confetti`](https://github.com/avo-hq/stimulus-confetti) - The easiest way to add confetti to your StimulusJS app
+
+## Try Avo ⭐️
+
+If you enjoyed this gem try out Avo. It helps developers build internal tools, admins, CMSes, CRMs, and any other type of business apps 10x faster on top of Ruby on Rails.
+
+[![](https://github.com/avo-hq/avo/raw/main/public/avo-assets/logo-on-white.png)](https://github.com/avo-hq/avo)
