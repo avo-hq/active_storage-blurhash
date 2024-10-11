@@ -68,10 +68,11 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
  - [`avo`](https://github.com/avo-hq/avo) - Build Content management systems with Ruby on Rails
  - [`class_variants`](https://github.com/avo-hq/class_variants) - Easily configure styles and apply them as classes. Very useful when you're implementing Tailwind CSS components and call them with different states.
+ - [`prop_initializer`](https://github.com/avo-hq/prop_initializer) - A flexible tool for defining properties on Ruby classes.
  - [`stimulus-confetti`](https://github.com/avo-hq/stimulus-confetti) - The easiest way to add confetti to your StimulusJS app
 
 ## Try Avo ⭐️
 
-If you enjoyed this gem try out Avo. It helps developers build internal tools, admins, CMSes, CRMs, and any other type of business apps 10x faster on top of Ruby on Rails.
+If you enjoyed this gem try out [Avo](https://github.com/avo-hq/avo). It helps developers build Internal Tools, Admin Panels, CMSes, CRMs, and any other type of Business Apps 10x faster on top of Ruby on Rails.
 
 [![](https://github.com/avo-hq/avo/raw/main/public/avo-assets/logo-on-white.png)](https://github.com/avo-hq/avo)
