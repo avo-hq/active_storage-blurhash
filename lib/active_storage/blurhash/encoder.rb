@@ -1,3 +1,8 @@
+# This implementation is an exact copy of Aaron Pattternsons implementation in
+#
+# See https://github.com/Gargron/blurhash/pull/21
+#
+# standard:disable all
 module ActiveStorage
   module Blurhash
     module Encoder

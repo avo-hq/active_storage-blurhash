@@ -17,8 +17,8 @@ module BlurhashImageHelper
       blob = source.blob
 
       if source.variation.transformations[:resize_to_limit]
-        original_width = blob.metadata['width']
-        original_height = blob.metadata['height']
+        original_width = blob.metadata["width"]
+        original_height = blob.metadata["height"]
         limit_width, limit_height = source.variation.transformations[:resize_to_limit]
 
         scale = [limit_width.to_f / original_width, limit_height.to_f / original_height].min
@@ -31,23 +31,23 @@ module BlurhashImageHelper
       end
     end
 
-    blurhash = blob&.metadata&.fetch('blurhash', nil)
+    blurhash = blob&.metadata&.fetch("blurhash", nil)
 
     if !!blurhash
-      size ||= "#{blob.metadata['width']}x#{blob.metadata['height']}"
+      size ||= "#{blob.metadata["width"]}x#{blob.metadata["height"]}"
 
-      options[:loading] = 'lazy'
+      options[:loading] = "lazy"
       options[:size] = size
 
       wrapper_class = options.delete(:wrapper_class)
       canvas_class = options.delete(:canvas_class)
       wrapper_style = options.delete(:wrapper_style)
-      width, height = size.split('x')
-      tag.div class: wrapper_class, data: { blurhash: blurhash }, style: "position: relative;#{wrapper_style}" do
+      width, height = size.split("x")
+      tag.div class: wrapper_class, data: {blurhash: blurhash}, style: "position: relative;#{wrapper_style}" do
         image_tag(source, options) +
           tag.canvas(
             height:, width:,
-            style: 'position: absolute; inset: 0; transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;',
+            style: "position: absolute; inset: 0; transition-property: opacity; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms;",
             class: canvas_class
           )
       end
