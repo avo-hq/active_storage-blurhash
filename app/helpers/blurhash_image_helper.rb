@@ -16,7 +16,7 @@ module BlurhashImageHelper
     when ActiveStorage::VariantWithRecord
       blob = source.blob
 
-      if source.variation.transformations[:resize_to_limit]
+      if source.variation.transformations[:resize_to_limit] && source.blob.analyzed?
         original_width = blob.metadata["width"]
         original_height = blob.metadata["height"]
         limit_width, limit_height = source.variation.transformations[:resize_to_limit]
