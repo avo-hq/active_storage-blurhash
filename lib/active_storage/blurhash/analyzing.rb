@@ -1,4 +1,4 @@
-require "blurhash"
+require "active_storage/blurhash/encoder"
 
 module ActiveStorage
   module Blurhash
@@ -14,11 +14,14 @@ module ActiveStorage
       end
 
       def blurhash
+        pixels = thumbnail.pixels
         {
-          blurhash: ::Blurhash.encode(
+          blurhash: ::ActiveStorage::Blurhash::Encoder.blurHashForPixels(
+            4, 3,
             thumbnail.width,
             thumbnail.height,
-            thumbnail.pixels
+            pixels,
+            thumbnail.width * 3
           )
         }
       end
