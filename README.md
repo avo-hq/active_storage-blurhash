@@ -28,6 +28,25 @@ This will create a wrapper `<div>` containing a `<canvas>` that is going to be p
 
 Make sure to run the install generator and backfill any existing attachments (see below). New attachments should be automatically analyzed to include the blurhash metadata.
 
+## Styling Options
+
+The `blurhash_image_tag` helper accepts additional options for styling:
+
+- `wrapper_class`: CSS classes applied to the wrapper `<div>` element
+- `canvas_class`: CSS classes applied to the `<canvas>` element
+
+### Preventing Canvas from Blocking Pointer Events
+
+If you have interactive elements (links, buttons, etc.) positioned over or near blurhash images, the canvas element may block pointer events even when hidden. To fix this, add `pointer-events-none` to the `canvas_class` option:
+
+```erb
+<%= blurhash_image_tag person.avatar, 
+    class: "rounded-full", 
+    canvas_class: "pointer-events-none" %>
+```
+
+This ensures clicks pass through to underlying interactive elements. If you're using Tailwind CSS, the `pointer-events-none` utility class works perfectly for this use case.
+
 ## Installation
 
 Add the library to your application's Gemfile:
