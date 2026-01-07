@@ -2,6 +2,8 @@
 
 A [blurhash](https://blurha.sh/) integration for images stored in ActiveStorage.
 
+![](./logo.png)
+
 ## Motivation
 
 Elimination of layout shift and speeding up First/Largest Contentful Paint are among the primary goals for improving Core Web Vitals. For both scenarios, lazy loading images while displaying a temporary Blurhash before swapping it out for the actual image is a great way to enhance the loading experience and perceived performance.
